@@ -30,7 +30,7 @@ const fetchStoreSettings = async (): Promise<StoreSettings> => {
     throw new Error(error.message);
   }
   
-  // Formata os dados para o formato esperado pelo app
+  // Formatar os dados para o formato esperado pelo app, com valores padrão para campos que podem não existir
   return {
     storeName: data.store_name,
     whatsappNumber: data.whatsapp_number || '',
