@@ -155,6 +155,8 @@ export type Database = {
           free_delivery_threshold: number | null
           id: string
           logo_url: string | null
+          maintenance_message: string | null
+          maintenance_mode: boolean | null
           show_free_delivery_banner: boolean | null
           social_media: Json | null
           store_closed_message: string | null
@@ -172,6 +174,8 @@ export type Database = {
           free_delivery_threshold?: number | null
           id?: string
           logo_url?: string | null
+          maintenance_message?: string | null
+          maintenance_mode?: boolean | null
           show_free_delivery_banner?: boolean | null
           social_media?: Json | null
           store_closed_message?: string | null
@@ -189,6 +193,8 @@ export type Database = {
           free_delivery_threshold?: number | null
           id?: string
           logo_url?: string | null
+          maintenance_message?: string | null
+          maintenance_mode?: boolean | null
           show_free_delivery_banner?: boolean | null
           social_media?: Json | null
           store_closed_message?: string | null
