@@ -12,6 +12,8 @@
   "showFreeDeliveryBanner": true,
   "alwaysOpen": false,
   "storeClosedMessage": "Estamos fechados no momento. Confira nossos horários de funcionamento.",
+  "maintenanceMode": false,
+  "maintenanceMessage": "Estamos em manutenção. Em breve voltaremos a funcionar normalmente!",
   "socialMedia": {
     "instagram": "https://instagram.com/minhaloja",
     "whatsapp": "https://wa.me/5511999999999"

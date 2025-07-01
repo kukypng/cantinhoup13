@@ -97,6 +97,8 @@ export interface StoreHours {
  *   showFreeDeliveryBanner: true,
  *   alwaysOpen: false,
  *   storeClosedMessage: "Estamos fechados no momento",
+ *   maintenanceMode: false,
+ *   maintenanceMessage: "Estamos em manutenção. Em breve voltaremos a funcionar normalmente!",
  *   socialMedia: { 
  *     instagram: "https://instagram.com/minhaloja",
  *     whatsapp: "https://wa.me/5511999999999"
@@ -118,6 +120,8 @@ export interface StoreSettings {
   showFreeDeliveryBanner?: boolean;
   alwaysOpen?: boolean;
   storeClosedMessage?: string;
+  maintenanceMode?: boolean;
+  maintenanceMessage?: string;
   socialMedia?: {
     instagram?: string;
     whatsapp?: string;

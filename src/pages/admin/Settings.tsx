@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import AdminLayout from "@/components/layout/AdminLayout";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,7 @@ import MessagesSection from "@/components/settings/MessagesSection";
 import SocialMediaSection from "@/components/settings/SocialMediaSection";
 import CouponsSection from "@/components/settings/CouponsSection";
 import StoreHoursSection from "@/components/settings/StoreHoursSection";
+import MaintenanceModeSection from "@/components/settings/MaintenanceModeSection";
 import ConfirmationDialog from "@/components/ui/confirmation-dialog";
 import { useConfirmation } from "@/hooks/useConfirmation";
 import { Coupon } from "@/types";
@@ -35,6 +35,8 @@ const Settings = () => {
     showFreeDeliveryBanner: settings.showFreeDeliveryBanner !== false,
     alwaysOpen: settings.alwaysOpen || false,
     storeClosedMessage: settings.storeClosedMessage || "",
+    maintenanceMode: settings.maintenanceMode || false,
+    maintenanceMessage: settings.maintenanceMessage || "Estamos em manutenção. Em breve voltaremos a funcionar normalmente!",
     instagram: settings.socialMedia?.instagram || "",
     whatsapp: settings.socialMedia?.whatsapp || ""
   });
@@ -126,6 +128,8 @@ const Settings = () => {
       showFreeDeliveryBanner: formData.showFreeDeliveryBanner,
       alwaysOpen: formData.alwaysOpen,
       storeClosedMessage: formData.storeClosedMessage,
+      maintenanceMode: formData.maintenanceMode,
+      maintenanceMessage: formData.maintenanceMessage,
       socialMedia
     });
     
@@ -197,6 +201,13 @@ const Settings = () => {
             <StoreHoursSection
               alwaysOpen={formData.alwaysOpen}
               storeClosedMessage={formData.storeClosedMessage}
+              onInputChange={handleInputChange}
+              onSwitchChange={handleSwitchChange}
+            />
+
+            <MaintenanceModeSection
+              maintenanceMode={formData.maintenanceMode}
+              maintenanceMessage={formData.maintenanceMessage}
               onInputChange={handleInputChange}
               onSwitchChange={handleSwitchChange}
             />

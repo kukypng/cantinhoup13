@@ -45,6 +45,8 @@ const fetchStoreSettings = async (): Promise<StoreSettings> => {
     showFreeDeliveryBanner: data.show_free_delivery_banner,
     alwaysOpen: data.always_open || false,
     storeClosedMessage: data.store_closed_message,
+    maintenanceMode: data.maintenance_mode || false,
+    maintenanceMessage: data.maintenance_message || 'Estamos em manutenção. Em breve voltaremos a funcionar normalmente!',
     socialMedia: data.social_media || {}
   } as StoreSettings;
 };
@@ -88,6 +90,8 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         show_free_delivery_banner: newSettings.showFreeDeliveryBanner,
         always_open: newSettings.alwaysOpen,
         store_closed_message: newSettings.storeClosedMessage,
+        maintenance_mode: newSettings.maintenanceMode,
+        maintenance_message: newSettings.maintenanceMessage,
         social_media: newSettings.socialMedia || {}
       };
 
