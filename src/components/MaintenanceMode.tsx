@@ -1,10 +1,17 @@
 
 import React from "react";
 import { useStore } from "@/context/StoreContext";
-import { Wrench, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Wrench, Clock, LogIn } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const MaintenanceMode = () => {
   const { settings } = useStore();
+  const navigate = useNavigate();
+
+  const handleAdminLogin = () => {
+    navigate("/login");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center p-4">
@@ -46,6 +53,18 @@ const MaintenanceMode = () => {
           <p className="text-gray-600 leading-relaxed">
             {settings.maintenanceMessage || 'Estamos em manutenção. Em breve voltaremos a funcionar normalmente!'}
           </p>
+        </div>
+
+        {/* Botão de login admin */}
+        <div className="mb-8">
+          <Button 
+            onClick={handleAdminLogin}
+            variant="outline"
+            className="flex items-center gap-2"
+          >
+            <LogIn className="w-4 h-4" />
+            Login Admin
+          </Button>
         </div>
 
         {/* Links para redes sociais se disponíveis */}
