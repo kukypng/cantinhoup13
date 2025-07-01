@@ -1,0 +1,18 @@
+
+/* This file intentionally left mostly empty as styles are now handled by Tailwind CSS in index.css */
+
+/* Keep only animations that might be needed */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
