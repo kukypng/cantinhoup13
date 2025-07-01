@@ -27,7 +27,7 @@ const MaintenanceModeSection: React.FC<MaintenanceModeSectionProps> = ({
         <CardTitle className="flex items-center gap-2">
           <Wrench className="h-5 w-5 text-orange-600" />
           Modo de Manutenção
-          <HelpTooltip content="Ative quando precisar fazer manutenções no sistema. Os clientes verão uma página informativa enquanto você mantém acesso ao painel administrativo." />
+          <HelpTooltip text="Ative quando precisar fazer manutenções no sistema. Os clientes verão uma página informativa enquanto você mantém acesso ao painel administrativo." />
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -57,7 +57,7 @@ const MaintenanceModeSection: React.FC<MaintenanceModeSectionProps> = ({
         <div className="space-y-2">
           <Label htmlFor="maintenanceMessage">
             Mensagem de manutenção
-            <HelpTooltip content="Esta mensagem será exibida para os clientes durante o período de manutenção" />
+            <HelpTooltip text="Esta mensagem será exibida para os clientes durante o período de manutenção" />
           </Label>
           <Textarea
             id="maintenanceMessage"
